@@ -10,8 +10,7 @@ transfer <- strptime(paste(extract$Date,extract$Time,sep=" "),"%d/%m/%Y %H:%M:%S
 final <- cbind(transfer, extract)
 final$transfer <- as.POSIXct(transfer)
 
-# %in% will provide a series logical value result of TRUE or FALSE, but if using readtxt [],then True means choose
-# False means not to use it. THe final result will be corresponding context of the column
+
 hist(final$Global_active_power,col="red",main="Global Active Power",xlab ="Global Active Power (kilowatts)")
 # print plot 1
 
